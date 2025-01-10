@@ -14,3 +14,15 @@ function addTask(columnId) {
 
     
 }
+function updateClock() {
+    const clockElement = document.getElementById("realTimeClock");
+    const now = new Date();
+    const timeString = now.toLocaleTimeString(); // Format waktu berdasarkan lokal
+    clockElement.textContent = `Waktu: ${timeString}`;
+}
+
+// Perbarui setiap detik
+setInterval(updateClock, 1000);
+
+// Panggil sekali agar tidak menunggu interval pertama
+updateClock();
