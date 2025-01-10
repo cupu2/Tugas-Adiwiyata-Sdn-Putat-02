@@ -106,4 +106,21 @@ footer {
     bottom: 0;
     width: 100%;
 }
+#realTimeClock {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: 10px;
+    animation: pulse 1s infinite, colorChange 5s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animasi berdenyut */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
 
