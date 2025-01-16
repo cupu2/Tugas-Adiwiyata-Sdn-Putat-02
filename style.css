@@ -30,17 +30,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
     border-radius: 12px;
     margin: 20px;
 }
 
 .task-link {
-    background-color: rgba(248, 250, 228, 0.753);
+    background-color: rgba(221, 233, 222, 0.575);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 5px;
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -106,6 +106,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 #realTimeClock {
     font-size: 1.5em;
     color: #ffffff;
@@ -123,6 +124,4 @@ footer {
         transform: scale(1.2);
     }
 }
-
-
 
