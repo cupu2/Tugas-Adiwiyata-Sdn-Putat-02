@@ -24,7 +24,18 @@ body {
     margin: 5px 0 0;
     font-size: 1.2rem;
 }
+.marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
 .main-container {
     display: flex;
     justify-content: center;
