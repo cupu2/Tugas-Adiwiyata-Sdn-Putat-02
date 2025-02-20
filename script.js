@@ -26,3 +26,20 @@ setInterval(updateClock, 1000);
 
 // Panggil sekali agar tidak menunggu interval pertama
 updateClock();
+
+let marquee = document.getElementById("marquee");
+        let position = window.innerWidth;
+
+        function moveText() {
+            position -= 2; // Kecepatan gerak
+            marquee.style.left = position + "px";
+            if (position < -marquee.offsetWidth) {
+                position = window.innerWidth;
+            }
+            requestAnimationFrame(moveText);
+        }
+
+        moveText();
+
+
+
