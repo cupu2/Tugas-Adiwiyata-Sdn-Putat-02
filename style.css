@@ -190,3 +190,35 @@ nav ul li {
     transform: translateY(-3px);
 }
 
+
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.countdown-container {
+    position: fixed; /* Agar tetap terlihat meskipun scroll */
+    top: 120px;  /* Posisi di atas */
+    right: 20px; /* Geser ke kanan */
+    background: #ffeb3b;
+    color: #333;
+    font-size: 0.6em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+
+
+    /* Efek denyut */
+    animation: pulse 1.5s infinite;
+}
+
+
+
+
+
