@@ -46,8 +46,9 @@ body {
     margin: 20px;
 }
 
+
 .task-link {
-    background-color: rgba(221, 233, 222, 0.575);
+    background-color: rgba(0, 0, 0, 0.575);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 5px;
@@ -63,7 +64,7 @@ body {
 
 .task-link h2 {
     margin-bottom: 15px;
-    color: #0077b6;
+    color: #ffffff;
 }
 
 .task-link button {
