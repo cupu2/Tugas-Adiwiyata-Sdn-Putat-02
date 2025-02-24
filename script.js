@@ -1,45 +1,23 @@
-function addTask(columnId) {
-    const input = document.getElementById(`${columnId}Input`);
-    const taskList = document.querySelector(`#${columnId} .task-list`);
-    const newTask = input.value.trim();
+// Tentukan tanggal batas akhir upload (6 Maret 2025, pukul 23:59:59)
+const deadline = new Date("March 6, 2025 23:59:59").getTime();
 
-    if (newTask) {
-        const listItem = document.createElement('li');
-        listItem.textContent = newTask;
-        taskList.appendChild(listItem);
-        input.value = '';
+function updateCountdown() {
+    const now = new Date().getTime();
+    const remainingTime = deadline - now;
+
+    if (remainingTime > 0) {
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = 
+            `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
     } else {
-        alert('Tugas tidak boleh kosong!');
+        document.getElementById("countdown").innerHTML = "Waktu pengumpulan sudah berakhir!";
     }
-
-    
-}
-function updateClock() {
-    const clockElement = document.getElementById("realTimeClock");
-    const now = new Date();
-    const timeString = now.toLocaleTimeString(); // Format waktu berdasarkan lokal
-    clockElement.textContent = `Waktu: ${timeString}`;
 }
 
-// Perbarui setiap detik
-setInterval(updateClock, 1000);
-
-// Panggil sekali agar tidak menunggu interval pertama
-updateClock();
-
-let marquee = document.getElementById("marquee");
-        let position = window.innerWidth;
-
-        function moveText() {
-            position -= 2; // Kecepatan gerak
-            marquee.style.left = position + "px";
-            if (position < -marquee.offsetWidth) {
-                position = window.innerWidth;
-            }
-            requestAnimationFrame(moveText);
-        }
-
-        moveText();
-
-
-
+// Update hitungan mundur setiap detik
+setInterval(updateCountdown, 1000);
+updateCountdown();
