@@ -12,7 +12,7 @@ function updateCountdown() {
         const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
         document.getElementById("countdown").innerHTML = 
-            `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+            `${days} hari ${hours} jam ${minutes} menit ${seconds} detik semangat`;
     } else {
         document.getElementById("countdown").innerHTML = "Waktu pengumpulan sudah berakhir!";
     }
